@@ -1,0 +1,21 @@
+name: 'test-tfe-run'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+    - uses: kvrhdn/tfe-run@v1
+      with:
+        token: ${{ secrets.TF_API_TOKEN }}
+        workspace: test-api-workspace
+        message: |
+          Run triggered using tfe-run (commit: ${{ github.SHA }})
+        type: apply
+      id: tfe-run

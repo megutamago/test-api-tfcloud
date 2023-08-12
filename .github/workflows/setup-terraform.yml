@@ -1,8 +1,5 @@
 name: 'setup-tf'
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 env:
   tf_actions_working_dir: ./
