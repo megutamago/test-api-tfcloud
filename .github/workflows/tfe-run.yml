@@ -1,8 +1,8 @@
 name: 'test-tfe-run'
 on:
-  push:
-    branches:
-      - main
+  #push:
+  #  branches:
+  #    - main
   workflow_dispatch:
 jobs:
   terraform:
@@ -17,6 +17,6 @@ jobs:
         organization: melanmeg
         workspace: test-api-workspace
         message: |
-          Run triggered using tfe-run (commit: ${{ github.SHA }})
-        type: apply
+          Destroy triggered using tfe-run (commit: ${{ github.SHA }})
+        type: destroy
       id: tfe-run
