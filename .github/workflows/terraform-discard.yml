@@ -22,5 +22,6 @@ jobs:
         uses: hashicorp/tfc-workflows-github/actions/discard-run@v1.0.4
         id: discard
         with:
+          token: ${{ secrets.TF_API_TOKEN }}
           run: ${{ steps.create-run.outputs.run_id }}
           comment: "Discarded from GitHub Actions CI"
