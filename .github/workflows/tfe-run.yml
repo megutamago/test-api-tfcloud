@@ -19,4 +19,5 @@ jobs:
         message: |
           Destroy triggered using tfe-run (commit: ${{ github.SHA }})
         type: destroy
+        directory: ./
       id: tfe-run
