@@ -13,3 +13,10 @@ resource "aws_vpc" "test-vpc" {
     Name = "test-vpc"
   }
 }
+
+resource "aws_vpc" "test2-vpc" {
+  cidr_block = "10.1.0.0/16"
+  tags = {
+    Name = "test2-vpc"
+  }
+}
