@@ -1,4 +1,4 @@
-name: 'Terraform Delete'
+name: 'Terraform Clean'
 on:
   #push:
   #  branches:
@@ -8,11 +8,11 @@ env:
   TF_CLOUD_ORGANIZATION: "melanmeg"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "test-api-workspace"
-  CONFIG_DIRECTORY: "./delete2"
+  CONFIG_DIRECTORY: "./clean"
 jobs:
   terraform:
     if: github.repository != 'megutamago/test-api-workspace'
-    name: "Terraform Delete Job"
+    name: "Terraform Clean Job"
     runs-on: ubuntu-latest
     permissions:
       contents: read
