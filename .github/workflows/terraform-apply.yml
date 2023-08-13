@@ -1,8 +1,8 @@
 name: 'Terraform Apply'
 on:
-  push:
-    branches:
-      - main
+  #push:
+  #  branches:
+  #    - main
   workflow_dispatch:
 env:
   TF_CLOUD_ORGANIZATION: "melanmeg"
@@ -12,7 +12,7 @@ env:
 jobs:
   terraform:
     if: github.repository != 'megutamago/test-api-workspace'
-    name: "Terraform Apply"
+    name: "Terraform Apply Job"
     runs-on: ubuntu-latest
     permissions:
       contents: read

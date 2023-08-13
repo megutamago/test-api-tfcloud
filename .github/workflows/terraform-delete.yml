@@ -8,11 +8,11 @@ env:
   TF_CLOUD_ORGANIZATION: "melanmeg"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "test-api-workspace"
-  CONFIG_DIRECTORY: "./delete"
+  CONFIG_DIRECTORY: "./delete2"
 jobs:
   terraform:
     if: github.repository != 'megutamago/test-api-workspace'
-    name: "Terraform Apply"
+    name: "Terraform Delete Job"
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -10,7 +10,7 @@ env:
 jobs:
   terraform:
     if: github.repository != 'megutamago/test-api-workspace'
-    name: "Terraform Plan"
+    name: "Terraform Plan Job"
     runs-on: ubuntu-latest
     permissions:
       contents: read
